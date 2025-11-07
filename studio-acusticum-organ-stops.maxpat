@@ -9,10 +9,94 @@
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 32.0, 178.0, 1446.0, 571.0 ],
+        "rect": [ 35.0, 170.0, 1446.0, 571.0 ],
         "openinpresentation": 1,
         "toolbarvisible": 0,
         "boxes": [
+            {
+                "box": {
+                    "id": "obj-378",
+                    "maxclass": "live.text",
+                    "numinlets": 1,
+                    "numoutlets": 2,
+                    "outlettype": [ "", "" ],
+                    "parameter_enable": 1,
+                    "patching_rect": [ 625.0, 709.0, 89.0, 20.0 ],
+                    "presentation": 1,
+                    "presentation_rect": [ 58.0, 108.0, 97.0, 20.0 ],
+                    "saved_attribute_attributes": {
+                        "valueof": {
+                            "parameter_enum": [ "val1", "val2" ],
+                            "parameter_longname": "live.text[11]",
+                            "parameter_mmax": 1,
+                            "parameter_modmode": 0,
+                            "parameter_shortname": "live.text[11]",
+                            "parameter_type": 2
+                        }
+                    },
+                    "text": "Sophtar mappings",
+                    "texton": "Sophtar mappings",
+                    "varname": "live.text[11]"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-361",
+                    "maxclass": "newobj",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 3370.0, 961.5, 63.0, 22.0 ],
+                    "text": "r organ-ch"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-357",
+                    "maxclass": "newobj",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 2665.0, 679.5, 65.0, 22.0 ],
+                    "text": "s organ-ch"
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Arial",
+                    "fontsize": 13.0,
+                    "id": "obj-337",
+                    "maxclass": "newobj",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 3019.0, 953.0, 131.0, 23.0 ],
+                    "text": "r notes-output-device"
+                }
+            },
+            {
+                "box": {
+                    "fontname": "Arial",
+                    "fontsize": 13.0,
+                    "id": "obj-334",
+                    "maxclass": "newobj",
+                    "numinlets": 0,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "patching_rect": [ 2643.0, 580.5, 123.0, 23.0 ],
+                    "text": "r notes-input-device"
+                }
+            },
+            {
+                "box": {
+                    "id": "obj-303",
+                    "maxclass": "gswitch2",
+                    "numinlets": 2,
+                    "numoutlets": 2,
+                    "outlettype": [ "", "" ],
+                    "parameter_enable": 0,
+                    "patching_rect": [ 708.5, 734.5, 39.0, 32.0 ]
+                }
+            },
             {
                 "box": {
                     "id": "obj-461",
@@ -93,7 +177,7 @@
                     "fontname": "Arial",
                     "fontsize": 13.0,
                     "id": "obj-450",
-                    "items": [ "AU DLS Synth 1", ",", "IAC Driver Bus 1", ",", "IAC Driver Bus 2", ",", "IAC Driver Bus 3", ",", "IAC Driver Bus 4", ",", "from Max 1", ",", "from Max 2" ],
+                    "items": [ "AU DLS Synth 1", ",", "IAC Driver Bus 1", ",", "IAC Driver Bus 2", ",", "IAC Driver Bus 3", ",", "IAC Driver Bus 4", ",", "UltraLite mk3 Hybrid MIDI Port", ",", "from Max 1", ",", "from Max 2" ],
                     "labelclick": 1,
                     "maxclass": "umenu",
                     "numinlets": 1,
@@ -197,7 +281,7 @@
                     "fontname": "Arial",
                     "fontsize": 13.0,
                     "id": "obj-443",
-                    "items": [ "IAC Driver Bus 1", ",", "IAC Driver Bus 2", ",", "IAC Driver Bus 3", ",", "IAC Driver Bus 4", ",", "to Max 1", ",", "to Max 2" ],
+                    "items": [ "IAC Driver Bus 1", ",", "IAC Driver Bus 2", ",", "IAC Driver Bus 3", ",", "IAC Driver Bus 4", ",", "UltraLite mk3 Hybrid MIDI Port", ",", "UltraLite mk3 Hybrid Sync Port", ",", "to Max 1", ",", "to Max 2" ],
                     "labelclick": 1,
                     "maxclass": "umenu",
                     "numinlets": 1,
@@ -369,12 +453,12 @@
             {
                 "box": {
                     "id": "obj-246",
-                    "linecount": 6,
+                    "linecount": 7,
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 3499.0, 926.5, 151.0, 87.0 ],
-                    "text": "NB: now we get two note offs per note, it might not be a problem but might unnecessarily clog the scheduler when many notes are played"
+                    "patching_rect": [ 2981.5, 580.5, 151.0, 100.0 ],
+                    "text": "Stuck notes workaround.\nNB: now we get two note offs per note, it might not be a problem but might unnecessarily clog the scheduler when many notes are played"
                 }
             },
             {
@@ -536,7 +620,7 @@
                     "numinlets": 1,
                     "numoutlets": 3,
                     "outlettype": [ "int", "int", "int" ],
-                    "patching_rect": [ 2749.5, 638.0, 41.0, 22.0 ],
+                    "patching_rect": [ 2643.0, 638.0, 41.0, 22.0 ],
                     "text": "notein"
                 }
             },
@@ -547,7 +631,7 @@
                     "numinlets": 1,
                     "numoutlets": 1,
                     "outlettype": [ "" ],
-                    "patching_rect": [ 728.5, 736.0, 32.0, 22.0 ],
+                    "patching_rect": [ 768.0, 756.5, 32.0, 22.0 ],
                     "text": "pvar"
                 }
             },
@@ -568,7 +652,7 @@
                             "modernui": 1
                         },
                         "classnamespace": "box",
-                        "rect": [ 402.0, 237.0, 913.0, 558.0 ],
+                        "rect": [ 355.0, 239.0, 945.0, 643.0 ],
                         "boxes": [
                             {
                                 "box": {
@@ -609,7 +693,7 @@
                                     "numinlets": 8,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 299.18181818181824, 200.0, 92.5, 22.0 ],
+                                    "patching_rect": [ 368.0, 225.0, 92.5, 22.0 ],
                                     "text": "join 8"
                                 }
                             },
@@ -620,7 +704,7 @@
                                     "numinlets": 1,
                                     "numoutlets": 1,
                                     "outlettype": [ "bang" ],
-                                    "patching_rect": [ 319.18181818181824, 347.0, 58.0, 22.0 ],
+                                    "patching_rect": [ 319.18181818181824, 336.0, 58.0, 22.0 ],
                                     "text": "loadbang"
                                 }
                             },
@@ -653,8 +737,8 @@
                                     "numinlets": 3,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 68.0, 357.0, 53.0, 22.0 ],
-                                    "text": "clip 0 30"
+                                    "patching_rect": [ 66.5, 315.0, 53.0, 22.0 ],
+                                    "text": "clip 0 16"
                                 }
                             },
                             {
@@ -697,7 +781,7 @@
                                     "numinlets": 6,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 68.0, 330.0, 110.0, 22.0 ],
+                                    "patching_rect": [ 66.5, 288.0, 110.0, 22.0 ],
                                     "text": "scale 10 127 0 100"
                                 }
                             },
@@ -719,8 +803,8 @@
                                     "numinlets": 4,
                                     "numoutlets": 1,
                                     "outlettype": [ "" ],
-                                    "patching_rect": [ 68.0, 430.0, 204.0, 22.0 ],
-                                    "text": "stops-crescendo-pedals-acusticum 0"
+                                    "patching_rect": [ 68.0, 430.0, 172.0, 22.0 ],
+                                    "text": "stops-crescendo-I-acusticum 0"
                                 }
                             },
                             {
@@ -1030,7 +1114,7 @@
                                             }
                                         ]
                                     },
-                                    "patching_rect": [ 299.18181818181824, 234.0, 98.0, 22.0 ],
+                                    "patching_rect": [ 368.0, 259.0, 98.0, 22.0 ],
                                     "text": "p split-and-mean"
                                 }
                             },
@@ -1051,7 +1135,7 @@
                                     "maxclass": "comment",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 421.18181818181824, 234.0, 150.0, 47.0 ],
+                                    "patching_rect": [ 479.0, 234.0, 150.0, 47.0 ],
                                     "text": "lowest 2 to pedal\nmid 3 to manual 1\ntop 3 to manual 2"
                                 }
                             },
@@ -1150,7 +1234,7 @@
                                     "numoutlets": 2,
                                     "outlettype": [ "", "bang" ],
                                     "parameter_enable": 0,
-                                    "patching_rect": [ 216.5, 140.0, 50.0, 22.0 ]
+                                    "patching_rect": [ 261.6818181818182, 132.0, 50.0, 22.0 ]
                                 }
                             },
                             {
@@ -1280,12 +1364,6 @@
                                 "patchline": {
                                     "destination": [ "obj-140", 3 ],
                                     "source": [ "obj-130", 0 ]
-                                }
-                            },
-                            {
-                                "patchline": {
-                                    "destination": [ "obj-130", 0 ],
-                                    "source": [ "obj-131", 0 ]
                                 }
                             },
                             {
@@ -2121,7 +2199,7 @@
                     "fontname": "Arial",
                     "fontsize": 13.0,
                     "id": "obj-427",
-                    "items": [ "IAC Driver Bus 1", ",", "IAC Driver Bus 2", ",", "IAC Driver Bus 3", ",", "IAC Driver Bus 4", ",", "to Max 1", ",", "to Max 2" ],
+                    "items": [ "IAC Driver Bus 1", ",", "IAC Driver Bus 2", ",", "IAC Driver Bus 3", ",", "IAC Driver Bus 4", ",", "UltraLite mk3 Hybrid MIDI Port", ",", "UltraLite mk3 Hybrid Sync Port", ",", "to Max 1", ",", "to Max 2" ],
                     "labelclick": 1,
                     "maxclass": "umenu",
                     "numinlets": 1,
@@ -2349,7 +2427,7 @@
                     "fontname": "Arial",
                     "fontsize": 13.0,
                     "id": "obj-407",
-                    "items": [ "AU DLS Synth 1", ",", "IAC Driver Bus 1", ",", "IAC Driver Bus 2", ",", "IAC Driver Bus 3", ",", "IAC Driver Bus 4", ",", "from Max 1", ",", "from Max 2" ],
+                    "items": [ "AU DLS Synth 1", ",", "IAC Driver Bus 1", ",", "IAC Driver Bus 2", ",", "IAC Driver Bus 3", ",", "IAC Driver Bus 4", ",", "UltraLite mk3 Hybrid MIDI Port", ",", "from Max 1", ",", "from Max 2" ],
                     "labelclick": 1,
                     "maxclass": "umenu",
                     "numinlets": 1,
@@ -2452,7 +2530,7 @@
                     "fontname": "Arial",
                     "fontsize": 13.0,
                     "id": "obj-393",
-                    "items": [ "IAC Driver Bus 1", ",", "IAC Driver Bus 2", ",", "IAC Driver Bus 3", ",", "IAC Driver Bus 4", ",", "to Max 1", ",", "to Max 2" ],
+                    "items": [ "IAC Driver Bus 1", ",", "IAC Driver Bus 2", ",", "IAC Driver Bus 3", ",", "IAC Driver Bus 4", ",", "UltraLite mk3 Hybrid MIDI Port", ",", "UltraLite mk3 Hybrid Sync Port", ",", "to Max 1", ",", "to Max 2" ],
                     "labelclick": 1,
                     "maxclass": "umenu",
                     "numinlets": 1,
@@ -2495,7 +2573,7 @@
                     "fontname": "Arial",
                     "fontsize": 13.0,
                     "id": "obj-389",
-                    "items": [ "IAC Driver Bus 1", ",", "IAC Driver Bus 2", ",", "IAC Driver Bus 3", ",", "IAC Driver Bus 4", ",", "to Max 1", ",", "to Max 2" ],
+                    "items": [ "IAC Driver Bus 1", ",", "IAC Driver Bus 2", ",", "IAC Driver Bus 3", ",", "IAC Driver Bus 4", ",", "UltraLite mk3 Hybrid MIDI Port", ",", "UltraLite mk3 Hybrid Sync Port", ",", "to Max 1", ",", "to Max 2" ],
                     "labelclick": 1,
                     "maxclass": "umenu",
                     "numinlets": 1,
@@ -3337,6 +3415,7 @@
                         "live.text[114]": [ 0.0 ],
                         "live.text[118]": [ 0.0 ],
                         "live.text[119]": [ 0.0 ],
+                        "live.text[11]": [ 0.0 ],
                         "live.text[121]": [ 0.0 ],
                         "live.text[12]": [ 1.0 ],
                         "live.text[133]": [ 0.0 ],
@@ -3378,7 +3457,7 @@
                         "stop_107": [ 0.0 ],
                         "stop_108": [ 0.0 ],
                         "stop_109": [ 0.0 ],
-                        "stop_11": [ 0.0 ],
+                        "stop_11": [ 1.0 ],
                         "stop_110": [ 0.0 ],
                         "stop_111": [ 0.0 ],
                         "stop_112": [ 0.0 ],
@@ -3397,13 +3476,13 @@
                         "stop_125": [ 0.0 ],
                         "stop_126": [ 0.0 ],
                         "stop_127": [ 0.0 ],
-                        "stop_13": [ 0.0 ],
+                        "stop_13": [ 1.0 ],
                         "stop_131": [ 0.0 ],
                         "stop_132": [ 0.0 ],
                         "stop_134": [ 0.0 ],
                         "stop_135": [ 0.0 ],
                         "stop_136": [ 0.0 ],
-                        "stop_14": [ 0.0 ],
+                        "stop_14": [ 1.0 ],
                         "stop_140": [ 0.0 ],
                         "stop_141": [ 0.0 ],
                         "stop_142": [ 0.0 ],
@@ -3413,11 +3492,11 @@
                         "stop_147": [ 0.0 ],
                         "stop_148": [ 0.0 ],
                         "stop_149": [ 0.0 ],
-                        "stop_15": [ 0.0 ],
+                        "stop_15": [ 1.0 ],
                         "stop_150": [ 0.0 ],
                         "stop_151": [ 0.0 ],
                         "stop_152": [ 0.0 ],
-                        "stop_153": [ 0.0 ],
+                        "stop_153": [ 1.0 ],
                         "stop_154": [ 0.0 ],
                         "stop_155": [ 0.0 ],
                         "stop_156": [ 0.0 ],
@@ -3433,8 +3512,8 @@
                         "stop_166": [ 0.0 ],
                         "stop_167": [ 0.0 ],
                         "stop_17": [ 0.0 ],
-                        "stop_170": [ 1.0 ],
-                        "stop_171": [ 1.0 ],
+                        "stop_170": [ 0.0 ],
+                        "stop_171": [ 0.0 ],
                         "stop_172": [ 0.0 ],
                         "stop_173": [ 0.0 ],
                         "stop_174": [ 0.0 ],
@@ -3442,16 +3521,16 @@
                         "stop_176": [ 0.0 ],
                         "stop_177": [ 0.0 ],
                         "stop_178": [ 0.0 ],
-                        "stop_179": [ 1.0 ],
+                        "stop_179": [ 0.0 ],
                         "stop_18": [ 0.0 ],
                         "stop_180": [ 0.0 ],
                         "stop_181": [ 0.0 ],
                         "stop_182": [ 0.0 ],
-                        "stop_183": [ 1.0 ],
+                        "stop_183": [ 0.0 ],
                         "stop_184": [ 0.0 ],
                         "stop_185": [ 0.0 ],
                         "stop_186": [ 0.0 ],
-                        "stop_187": [ 1.0 ],
+                        "stop_187": [ 0.0 ],
                         "stop_188": [ 0.0 ],
                         "stop_189": [ 0.0 ],
                         "stop_19": [ 0.0 ],
@@ -3464,8 +3543,8 @@
                         "stop_197": [ 0.0 ],
                         "stop_198": [ 0.0 ],
                         "stop_199": [ 0.0 ],
-                        "stop_2": [ 1.0 ],
-                        "stop_20": [ 1.0 ],
+                        "stop_2": [ 0.0 ],
+                        "stop_20": [ 0.0 ],
                         "stop_200": [ 0.0 ],
                         "stop_201": [ 0.0 ],
                         "stop_203": [ 0.0 ],
@@ -3476,15 +3555,15 @@
                         "stop_208": [ 0.0 ],
                         "stop_21": [ 0.0 ],
                         "stop_22": [ 0.0 ],
-                        "stop_23": [ 1.0 ],
+                        "stop_23": [ 0.0 ],
                         "stop_24": [ 0.0 ],
-                        "stop_25": [ 1.0 ],
-                        "stop_26": [ 0.0 ],
+                        "stop_25": [ 0.0 ],
+                        "stop_26": [ 1.0 ],
                         "stop_27": [ 0.0 ],
-                        "stop_28": [ 1.0 ],
+                        "stop_28": [ 0.0 ],
                         "stop_29": [ 0.0 ],
                         "stop_3": [ 0.0 ],
-                        "stop_30": [ 0.0 ],
+                        "stop_30": [ 1.0 ],
                         "stop_33": [ 0.0 ],
                         "stop_34": [ 0.0 ],
                         "stop_35": [ 0.0 ],
@@ -3492,7 +3571,7 @@
                         "stop_37": [ 0.0 ],
                         "stop_38": [ 0.0 ],
                         "stop_39": [ 0.0 ],
-                        "stop_4": [ 1.0 ],
+                        "stop_4": [ 0.0 ],
                         "stop_40": [ 0.0 ],
                         "stop_41": [ 0.0 ],
                         "stop_42": [ 0.0 ],
@@ -3513,11 +3592,11 @@
                         "stop_56": [ 0.0 ],
                         "stop_57": [ 0.0 ],
                         "stop_58": [ 0.0 ],
-                        "stop_59": [ 1.0 ],
+                        "stop_59": [ 0.0 ],
                         "stop_6": [ 0.0 ],
                         "stop_60": [ 0.0 ],
                         "stop_61": [ 0.0 ],
-                        "stop_62": [ 1.0 ],
+                        "stop_62": [ 0.0 ],
                         "stop_63": [ 0.0 ],
                         "stop_64": [ 0.0 ],
                         "stop_65": [ 0.0 ],
@@ -3536,7 +3615,7 @@
                         "stop_77": [ 0.0 ],
                         "stop_78": [ 0.0 ],
                         "stop_79": [ 0.0 ],
-                        "stop_8": [ 0.0 ],
+                        "stop_8": [ 1.0 ],
                         "stop_80": [ 0.0 ],
                         "stop_81": [ 0.0 ],
                         "stop_82": [ 0.0 ],
@@ -3545,7 +3624,7 @@
                         "stop_87": [ 0.0 ],
                         "stop_88": [ 0.0 ],
                         "stop_89": [ 0.0 ],
-                        "stop_9": [ 0.0 ],
+                        "stop_9": [ 1.0 ],
                         "stop_90": [ 0.0 ],
                         "stop_92": [ 0.0 ],
                         "stop_93": [ 0.0 ],
@@ -10452,7 +10531,7 @@
                     "patching_rect": [ 156.0, 666.0, 1325.0, 35.0 ],
                     "presentation": 1,
                     "presentation_rect": [ 17.0, 515.0, 1408.0, 35.0 ],
-                    "text": "240 0 6 3 112 8 4 20 2 36 2 32 0 0 0 72 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12 68 2 0 0 0 247"
+                    "text": "240 0 6 3 112 8 5 0 119 0 8 64 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8 0 0 0 0 0 0 0 247"
                 }
             },
             {
@@ -11351,6 +11430,7 @@
             {
                 "patchline": {
                     "destination": [ "obj-3", 6 ],
+                    "order": 1,
                     "source": [ "obj-19", 0 ]
                 }
             },
@@ -12144,6 +12224,18 @@
                     "destination": [ "obj-299", 0 ],
                     "order": 1,
                     "source": [ "obj-302", 1 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-357", 0 ],
+                    "source": [ "obj-302", 2 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-354", 0 ],
+                    "source": [ "obj-303", 1 ]
                 }
             },
             {
@@ -13354,6 +13446,12 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-302", 0 ],
+                    "source": [ "obj-334", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-38", 0 ],
                     "source": [ "obj-335", 0 ]
                 }
@@ -13396,6 +13494,12 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-433", 0 ],
+                    "source": [ "obj-337", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-340", 0 ],
                     "source": [ "obj-338", 0 ]
                 }
@@ -13422,6 +13526,12 @@
                 "patchline": {
                     "destination": [ "obj-358", 0 ],
                     "source": [ "obj-342", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-303", 1 ],
+                    "source": [ "obj-345", 0 ]
                 }
             },
             {
@@ -13711,6 +13821,12 @@
             },
             {
                 "patchline": {
+                    "destination": [ "obj-433", 2 ],
+                    "source": [ "obj-361", 0 ]
+                }
+            },
+            {
+                "patchline": {
                     "destination": [ "obj-362", 0 ],
                     "source": [ "obj-363", 0 ]
                 }
@@ -13761,6 +13877,12 @@
                 "patchline": {
                     "destination": [ "obj-372", 0 ],
                     "source": [ "obj-373", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-303", 0 ],
+                    "source": [ "obj-378", 0 ]
                 }
             },
             {
@@ -14895,6 +15017,7 @@
             "obj-359": [ "live.toggle", "live.toggle", 0 ],
             "obj-36": [ "177 Flauto 8", "177 Flauto 8", 0 ],
             "obj-37": [ "183 Viola alto 4", "183 Viola alto 4", 0 ],
+            "obj-378": [ "live.text[11]", "live.text[11]", 0 ],
             "obj-38": [ "9 Gross Quinte 5 1/3", "9 Gross Quinte 5 1/3", 0 ],
             "obj-384": [ "live.toggle[1]", "live.toggle", 0 ],
             "obj-39": [ "15 Flöte 2", "15 Flöte 2", 0 ],
@@ -14967,6 +15090,14 @@
             "obj-97": [ "61 Quinte 2 2/3", "61 Quinte 2 2/3", 0 ],
             "obj-98": [ "60 Terz 3 1/5", "60 Terz 3 1/5", 0 ],
             "obj-99": [ "59 Flûte douce", "59 Flûte douce", 0 ],
+            "parameterbanks": {
+                "0": {
+                    "index": 0,
+                    "name": "",
+                    "parameters": [ "-", "-", "-", "-", "-", "-", "-", "-" ],
+                    "buttons": [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+                }
+            },
             "inherited_shortname": 1
         },
         "autosave": 0
